@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rug Pull AI Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>Rug Pull Risk Scanner</h1>
+<select id="chain">
+  <option value="solana">Solana</option>
+  <option value="eth">Ethereum</option>
+</select>
+<input id="token" placeholder="Token Address">
+<button onclick="scan()">Scan</button>
+<h2 id="risk">Risk: -</h2>
+<canvas id="riskChart"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
