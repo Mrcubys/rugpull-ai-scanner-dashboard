@@ -1,2 +1,7 @@
-# rugpull-ai-scanner-dashboard
-AI-powered Rug Pull Risk Scanner: real ML model + Solana/ETH token analysis + Chart.js dashboard
+# Rug Pull AI Dashboard
+
+ML-powered Rug Pull Risk Scanner with:
+
+- Real ML model (RandomForest)
+- Solana & Ethereum token scan
+- Chart.js visualization
