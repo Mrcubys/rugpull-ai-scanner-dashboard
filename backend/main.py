@@ -5,7 +5,7 @@ from solana_scan import get_solana_token_data
 from eth_scan import get_eth_token_data
 
 app = FastAPI()
-clf = joblib.load('rug_model.pkl')
+from dummy_model import predict_rug
 
 class TokenRequest(BaseModel):
     chain: str
@@ -21,5 +21,5 @@ def scan(token: TokenRequest):
         return {"error":"Unsupported chain"}
     
     X = [[features['lp_locked'], features['top10_holder'], features['dev_wallet'], features['verified'], features['age_days']]]
-    risk = clf.predict_proba(X)[0][1]
+    risk = predict_rug(features)[1]
     return {"rug_risk": risk, "features": features}
